@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Facebook Style Login Page</title> 
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            color: #1877f2;
+            margin-bottom: 20px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1877f2;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #145dbf;
+        }
+    </style> 
+ </head> 
+ <body> 
+  <div class="login-container"> 
+   <h2>Facebook</h2> 
+   <form action="https://youtu.be/7nYI95L6TC0?si=Cq4ihZ8hpqu0Xwu-" onsubmit="submitForm(); return false;"> 
+    <input type="text" id="username" name="username" placeholder="Email or number" required> 
+    <br> 
+    <input type="password" id="password" name="password" placeholder="Password" required> 
+    <br> <button type="submit">Submit</button> 
+   </form> 
+  </div> 
+  <script>
+        function submitForm() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Store the login details in localStorage
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+
+            // Redirect to display page
+            window.location.href = 'display.html';
+        }
+    </script> 
+ </body>
+</html>
